@@ -1,7 +1,9 @@
-//console.log('hello');
+var url = document.URL;
+var searchUrl = "www.msde.co.kr:18080/kriso/main/userLogin.do";
 
-// 컨텐츠 페이지를 대상으로 실행
-chrome.tabs.executeScript({
-  code:'var loginid = document.getElementById("loginid").value = "kibeom";  var password = document.getElementById("password").value = "1111"; document.getElementById("btnLogin").click(); '
-}, function (result) {
-});
+if (url.indexOf(searchUrl) >= 0) {
+    document.getElementById("loginid").value = "kibeom";
+    document.getElementById("password").value = "1111";
+    //document.getElementById("btnLogin").click();
+}
+
